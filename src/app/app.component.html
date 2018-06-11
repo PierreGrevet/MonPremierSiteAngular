@@ -1,0 +1,16 @@
+<div style="text-align:center" ><h1>
+  {{title}}
+</h1>
+</div>
+<div class = "container">
+  <div class="row" >
+    <div class="col-xs-12">
+      <h2>Mes appareils</h2>
+      <ul class="list-group">
+        <app-mon-premier  *ngFor="let appareil of appareils"
+                          [appareilName]="appareil.name" ></app-mon-premier>
+      </ul>
+      <!--<button class="btn btn-success" [disabled]="!isAuth" (click)="onAllumer()">Tout allumer</button>-->
+    </div>
+  </div>
+</div>
