@@ -29,4 +29,12 @@ export class MonPremierComponent implements OnInit {
   getTextButton(): string {
     return this.appareilStatus === 'éteint' ? 'Allumer' : "Eteindre";
   }
+
+  getColor(): string{
+    if (this.appareilStatus === 'éteint') {
+      return 'red';
+    }
+
+    return 'green';
+  }
 }

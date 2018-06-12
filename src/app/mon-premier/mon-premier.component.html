@@ -1,8 +1,8 @@
 <li class="list-group-item">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4">
-        <h4>Appareil : {{ appareilName }} -- Statut : {{ appareilStatus }}</h4>
+      <div class="col-lg-4" >
+        <h4 [ngStyle]="{color: getColor()}" >Appareil : {{ appareilName }} -- Statut : {{ appareilStatus }}</h4>
       </div>
 
       <div class="col-lg-4">
@@ -10,7 +10,9 @@
       </div>
 
       <div class="col-lg-2">
-        <button type="button" [ngClass]="appareilStatus==='éteint' ? 'btn btn-success' : 'btn btn-danger'" (click)="onSwitch()">
+        <button type="button"
+                [ngClass]="appareilStatus==='éteint' ? 'btn btn-success' : 'btn btn-danger'"
+                (click)="onSwitch()">
          {{getTextButton()}}</button>
       </div>
 
